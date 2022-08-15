@@ -14,8 +14,24 @@ class Node{
 
 public class SumEvenGrandParent {
 
-    static int sumEvenGrandParents(){
 
+    static int sum=0;
+    static void rec(Node current, Node par, Node gpar){
+        if(current == null){
+            return;
+        }
+        if(gpar != null && gpar.val%2 ==0){
+            sum += current.val;
+        }
+        rec(current.left, current, par);
+        rec(current.right, current, par);
+
+    }
+
+    static int sumEvenGrandParents(Node root){
+    sum =0;
+    rec(root, null, null);
+    return sum;
     }
 
 
