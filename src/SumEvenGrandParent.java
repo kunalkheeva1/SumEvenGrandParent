@@ -14,7 +14,9 @@ class Node{
 
 public class SumEvenGrandParent {
 
-    static int sumEvenGrandParents()
+    static int sumEvenGrandParents(){
+
+    }
 
 
 
